@@ -29,7 +29,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{
   margin:0;
   background:var(--bg);
@@ -38,6 +38,8 @@ body{
   font-size:16px;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  max-width:100%;
 }
 h1,h2,h3,h4{
   font-family:"Fraunces",Georgia,serif;
@@ -326,7 +328,9 @@ footer p{color:rgba(239,232,222,.75);font-size:.92rem}
 }
 @media (max-width:880px){
   .nav__links{display:none}
+  .nav__cta{display:none}
   .burger{display:flex}
+  .nav__logo{font-size:1.02rem}
   .services__grid{grid-template-columns:1fr 1fr}
   .reviews__grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
@@ -334,6 +338,9 @@ footer p{color:rgba(239,232,222,.75);font-size:.92rem}
 }
 @media (max-width:560px){
   :root{--nav-h:66px}
+  .nav__inner{padding:0 16px}
+  .nav__logo{font-size:.88rem;gap:6px}
+  .nav__logo .mark{width:28px;height:28px}
   .services__grid{grid-template-columns:1fr}
   .gallery__grid{columns:2 140px}
   .hero__stats{gap:24px}
